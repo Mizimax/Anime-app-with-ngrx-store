@@ -1,0 +1,12 @@
+<header class="navbar">
+  <section class="navbar-section left">
+    <a routerLink="" class="navbar-brand mr-10">AnimeList</a>
+  </section>
+  <section class="navbar-center">
+    Logo
+  </section>
+  <section class="navbar-section right">
+    <input [ngClass]="{'show': searchToggle}" class="form-input" type="text" placeholder="Search..." />
+    <span (click)="searchToggle = !searchToggle"><i class="icon icon-search"></i>Search</span>
+  </section>
+</header>

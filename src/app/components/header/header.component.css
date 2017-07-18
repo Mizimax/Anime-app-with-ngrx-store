@@ -1,0 +1,30 @@
+.navbar{
+    background: #1A237E;
+}
+.navbar *:not(.color) {
+    color: #e7e9ed;
+}
+section{
+    height: 50px;
+}
+.left{
+    padding-left:50px;
+}
+.right{
+    padding-right:50px;
+}
+.form-input{
+    width: 0;
+    background: transparent;
+    margin-right:10px;
+    visibility: hidden;
+}
+.form-input.show{
+    visibility: visible;
+    width: 200px;
+}
+.icon{
+    margin-right:5px;
+    margin-bottom: 3px;
+    font-size:18px;
+}

@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-image">
+    <img [src]="data.attributes.posterImage.original" class="img-responsive" />
+  </div>
+  <div class="card-header">
+    <h4 class="card-title">{{ data.attributes.canonicalTitle }}</h4>
+    <h6 class="card-subtitle">{{ data.type }}</h6>
+  </div>
+  <div class="card-body">
+    {{ data.attributes.synopsis | slice:0:150 }}...
+  </div>
+  <div class="card-footer">
+    <label class="chip">
+      {{ data.type }}
+      <button class="btn btn-clear"></button>
+    </label>
+  </div>
+</div>

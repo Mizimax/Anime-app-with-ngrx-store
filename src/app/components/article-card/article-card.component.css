@@ -1,0 +1,8 @@
+.card{
+    width:300px;
+    margin:0 auto;
+}
+.img-responsive{
+    height: 300px !important;
+    width:100% !important;
+}
