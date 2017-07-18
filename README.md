@@ -1,4 +1,8 @@
-# NgrxHttp
+# Anime app with ngrx
+
+This project is to learn ngrx/store to manage state in my app
+
+Thanks kitsu.io for API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 
