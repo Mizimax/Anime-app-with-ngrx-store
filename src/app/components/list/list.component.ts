@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { NgProgressService } from 'ngx-progressbar';
 
@@ -13,12 +14,12 @@ import 'rxjs/add/operator/map';
 })
 export class ListComponent implements OnInit {
 
-  public Articles = []
+  public Animes = []
 
   private offset: number = 0
   private fetchOnce: boolean = false
 
-  constructor(private http: HttpClient, private progressBar: NgProgressService) { }
+  constructor(private http: HttpClient, private progressBar: NgProgressService, private router: Router) { }
 
   ngOnInit() {
     this.progressBar.start()
@@ -28,10 +29,14 @@ export class ListComponent implements OnInit {
   fetchAnimeList(offset){
     let url = 'https://kitsu.io/api/edge/anime?page[limit]=9&page[offset]=' + offset
     this.http.get(url).map(data=>data['data']).subscribe(anime=>{
-      this.Articles = [...this.Articles, ...anime];
+      this.Animes = [...this.Animes, ...anime];
       this.progressBar.done()
       this.fetchOnce = false;
     })
+  }
+
+  animeDetail(link){
+    this.router.navigate(['anime', link])
   }
 
   onScroll(){

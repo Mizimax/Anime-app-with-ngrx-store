@@ -5,8 +5,8 @@
             [infiniteScrollThrottle]="300"
             (scrolled)="onScroll()">
     <div class="columns">
-      <div class="column" *ngFor="let Article of Articles">
-        <app-article-card [data]="Article"></app-article-card>
+      <div class="column" *ngFor="let Anime of Animes">
+        <app-article-card (click)="animeDetail(Anime.id)" [data]="Anime"></app-article-card>
       </div>
     </div>
     <div id="loading">
